@@ -1,0 +1,20 @@
+本次大作业修改的/新写的函数
+assosiater:
+	void MatchJoints3D(const int& jIdx);//贪心搜索实现crossview连接
+	void MatchPersons4D(const std::vector<Person3D> lastPerson3D);//cost flow实现时域连接
+	void JointProposalCollocation(const int& jIdx);//在Jointlevel枚举proposals
+	float CalcJointProposalLoss(const int& jointProposalIdx, const int& jIdx);//在Jointlevel计算proposals的loss
+	float CalcPersonLoss(const std::vector<Eigen::VectorXi>& personMap);//对生成的人进行打分
+	float CalcPersonScore(const std::vector<Eigen::VectorXi>& personMap);
+	void NaiveTimeTrackingPerson3D(const std::vector<Person3D> lastPerson3D);//Naive time tracking方案
+	void TimeTrackingPersons6PartitleGraphs(const std::vector<Person3D> lastPerson3D);//费用流六部图匹配（最终未采用）
+	void Associater::FinishPersonsMap();//根据打分结果选出建的好的人
+main.cpp:
+	maintainPerson3D(associater.GetPersons3D())//删去建的不好的3D人
+新实现的类cost_flow:
+	该部分代码灵感来源https://www.cnblogs.com/Miracevin/p/9610823.html
+
+祝刘老师和各位助教新春快乐！
+
+自84 2018011716
+佴瑞乾
